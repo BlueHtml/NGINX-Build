@@ -22,7 +22,7 @@ jobs:
       - name: Configure nginx
         run: >
           cd nginx;
-          ./auto/configure --http-client-body-temp-path=/home/runner/proxy/cache/client_body --http-proxy-temp-path=/home/runner/proxy/cache/proxy --http-fastcgi-temp-path=/home/runner/proxy/cache/fastcgi --http-uwsgi-temp-path=/home/runner/proxy/cache/uwsgi --http-scgi-temp-path=/home/runner/proxy/cache/scgi;
+          ./auto/configure --prefix=/home/runner/proxy --http-client-body-temp-path=/home/runner/proxy/cache/client_body --http-proxy-temp-path=/home/runner/proxy/cache/proxy --http-fastcgi-temp-path=/home/runner/proxy/cache/fastcgi --http-uwsgi-temp-path=/home/runner/proxy/cache/uwsgi --http-scgi-temp-path=/home/runner/proxy/cache/scgi;
           cd ..;
       - name: Configure pcre2
         run: |
